@@ -1,9 +1,9 @@
 import type { ExpoConfig } from "expo/config";
 
 const defineConfig = (): ExpoConfig => ({
-  name: "expo",
-  slug: "expo",
-  scheme: "expo",
+  name: "mobile-webview",
+  slug: "mobile-webview",
+  scheme: "mobile-webview",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
@@ -19,19 +19,20 @@ const defineConfig = (): ExpoConfig => ({
   assetBundlePatterns: ["**/*"],
   ios: {
     supportsTablet: true,
-    bundleIdentifier: "your.bundle.identifier",
+    bundleIdentifier: "chia1104.com.mobileWebview",
   },
   android: {
     adaptiveIcon: {
       foregroundImage: "./assets/icon.png",
       backgroundColor: "#1F104A",
     },
+    package: "chia1104.com.mobileWebview",
   },
-  // extra: {
-  //   eas: {
-  //     projectId: "your-eas-project-id",
-  //   },
-  // },
+  extra: {
+    eas: {
+      projectId: "5c5e7850-ca8b-49c0-b022-9677388999e2",
+    },
+  },
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true,
@@ -43,7 +44,6 @@ const defineConfig = (): ExpoConfig => ({
         root: "./src/app",
       },
     ],
-    // "./expo-plugins/with-modify-gradle.js",
   ],
 });
 
