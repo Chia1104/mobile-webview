@@ -7,6 +7,9 @@
       "node": "18.16.1",
       "ios": {
         "resourceClass": "m-medium"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://chia1104.dev"
       }
     },
     "development": {
@@ -19,6 +22,12 @@
       "distribution": "internal",
       "ios": {
         "simulator": true
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "developmentClient": true,
+        "distribution": "internal"
       }
     },
     "production": {
